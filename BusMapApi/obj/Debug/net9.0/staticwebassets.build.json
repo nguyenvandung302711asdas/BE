@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "LN67kThVXpZLCjAgVl7Gx4mzA4EUJm2JWjhe2XWHTR4=",
+  "Source": "BusMapApi",
+  "BasePath": "_content/BusMapApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
