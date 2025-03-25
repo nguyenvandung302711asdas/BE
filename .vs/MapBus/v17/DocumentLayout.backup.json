@@ -1,0 +1,197 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Mobile\\BE\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|d:\\mobile\\be\\busmapapi\\services\\implementations\\useradminchatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|solutionrelative:busmapapi\\services\\implementations\\useradminchatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|d:\\mobile\\be\\busmapapi\\model\\dtos\\useradminmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|solutionrelative:busmapapi\\model\\dtos\\useradminmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|d:\\mobile\\be\\busmapapi\\model\\dtos\\useradminchatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|solutionrelative:busmapapi\\model\\dtos\\useradminchatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|d:\\mobile\\be\\busmapapi\\model\\entities\\useradminchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|solutionrelative:busmapapi\\model\\entities\\useradminchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|d:\\mobile\\be\\busmapapi\\model\\entities\\useradminmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|solutionrelative:busmapapi\\model\\entities\\useradminmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|d:\\mobile\\be\\busmapapi\\model\\busstop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|solutionrelative:busmapapi\\model\\busstop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|d:\\mobile\\be\\busmapapi\\model\\dtos\\groupchatmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|solutionrelative:busmapapi\\model\\dtos\\groupchatmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|d:\\mobile\\be\\busmapapi\\controller\\useradminchatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|solutionrelative:busmapapi\\controller\\useradminchatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|d:\\mobile\\be\\busmapapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|solutionrelative:busmapapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 16,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BusStop.cs",
+              "DocumentMoniker": "D:\\Mobile\\BE\\BusMapApi\\Model\\BusStop.cs",
+              "RelativeDocumentMoniker": "BusMapApi\\Model\\BusStop.cs",
+              "ToolTip": "D:\\Mobile\\BE\\BusMapApi\\Model\\BusStop.cs",
+              "RelativeToolTip": "BusMapApi\\Model\\BusStop.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T14:00:54.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GroupChatMessageDto.cs",
+              "DocumentMoniker": "D:\\Mobile\\BE\\BusMapApi\\Model\\DTOs\\GroupChatMessageDto.cs",
+              "RelativeDocumentMoniker": "BusMapApi\\Model\\DTOs\\GroupChatMessageDto.cs",
+              "ToolTip": "D:\\Mobile\\BE\\BusMapApi\\Model\\DTOs\\GroupChatMessageDto.cs",
+              "RelativeToolTip": "BusMapApi\\Model\\DTOs\\GroupChatMessageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:58:23.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserAdminChat.cs",
+              "DocumentMoniker": "D:\\Mobile\\BE\\BusMapApi\\Model\\Entities\\UserAdminChat.cs",
+              "RelativeDocumentMoniker": "BusMapApi\\Model\\Entities\\UserAdminChat.cs",
+              "ToolTip": "D:\\Mobile\\BE\\BusMapApi\\Model\\Entities\\UserAdminChat.cs",
+              "RelativeToolTip": "BusMapApi\\Model\\Entities\\UserAdminChat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:55:35.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserAdminMessage.cs",
+              "DocumentMoniker": "D:\\Mobile\\BE\\BusMapApi\\Model\\Entities\\UserAdminMessage.cs",
+              "RelativeDocumentMoniker": "BusMapApi\\Model\\Entities\\UserAdminMessage.cs",
+              "ToolTip": "D:\\Mobile\\BE\\BusMapApi\\Model\\Entities\\UserAdminMessage.cs",
+              "RelativeToolTip": "BusMapApi\\Model\\Entities\\UserAdminMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:55:28.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserAdminMessageDto.cs",
+              "DocumentMoniker": "D:\\Mobile\\BE\\BusMapApi\\Model\\DTOs\\UserAdminMessageDto.cs",
+              "RelativeDocumentMoniker": "BusMapApi\\Model\\DTOs\\UserAdminMessageDto.cs",
+              "ToolTip": "D:\\Mobile\\BE\\BusMapApi\\Model\\DTOs\\UserAdminMessageDto.cs",
+              "RelativeToolTip": "BusMapApi\\Model\\DTOs\\UserAdminMessageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:55:17.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserAdminChatDto.cs",
+              "DocumentMoniker": "D:\\Mobile\\BE\\BusMapApi\\Model\\DTOs\\UserAdminChatDto.cs",
+              "RelativeDocumentMoniker": "BusMapApi\\Model\\DTOs\\UserAdminChatDto.cs",
+              "ToolTip": "D:\\Mobile\\BE\\BusMapApi\\Model\\DTOs\\UserAdminChatDto.cs",
+              "RelativeToolTip": "BusMapApi\\Model\\DTOs\\UserAdminChatDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:55:15.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserAdminChatController.cs",
+              "DocumentMoniker": "D:\\Mobile\\BE\\BusMapApi\\Controller\\UserAdminChatController.cs",
+              "RelativeDocumentMoniker": "BusMapApi\\Controller\\UserAdminChatController.cs",
+              "ToolTip": "D:\\Mobile\\BE\\BusMapApi\\Controller\\UserAdminChatController.cs",
+              "RelativeToolTip": "BusMapApi\\Controller\\UserAdminChatController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAlwFEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:54:17.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDBContext.cs",
+              "DocumentMoniker": "D:\\Mobile\\BE\\BusMapApi\\Data\\ApplicationDBContext.cs",
+              "RelativeDocumentMoniker": "BusMapApi\\Data\\ApplicationDBContext.cs",
+              "ToolTip": "D:\\Mobile\\BE\\BusMapApi\\Data\\ApplicationDBContext.cs",
+              "RelativeToolTip": "BusMapApi\\Data\\ApplicationDBContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:44:43.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserAdminChatService.cs",
+              "DocumentMoniker": "D:\\Mobile\\BE\\BusMapApi\\Services\\Implementations\\UserAdminChatService.cs",
+              "RelativeDocumentMoniker": "BusMapApi\\Services\\Implementations\\UserAdminChatService.cs",
+              "ToolTip": "D:\\Mobile\\BE\\BusMapApi\\Services\\Implementations\\UserAdminChatService.cs",
+              "RelativeToolTip": "BusMapApi\\Services\\Implementations\\UserAdminChatService.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAQwJsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:44:35.051Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

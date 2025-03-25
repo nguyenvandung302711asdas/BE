@@ -1,4 +1,7 @@
 using api.Data;
+using BusMapApi.Services;
+using BusMapApi.Services.Implementations;
+using BusMapApi.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +22,17 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+builder.Services.AddScoped<IChatService, ChatService>();
+
+builder.Services.AddScoped<IUserAdminChatService, UserAdminChatService>();
+
+builder.Services.AddScoped<IGroupChatService, GroupChatService>();
+
+builder.Services.AddScoped<IFavoriteRouteService, FavoriteRouteService>();
+
+
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 builder.Services.AddCors(options =>
