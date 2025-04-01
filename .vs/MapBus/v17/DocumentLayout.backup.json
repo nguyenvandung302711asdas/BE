@@ -1,0 +1,97 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Code\\ASP\\BE_App\\MapBus\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|d:\\code\\asp\\be_app\\mapbus\\busmapapi\\controller\\busstopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|solutionrelative:busmapapi\\controller\\busstopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|d:\\code\\asp\\be_app\\mapbus\\busmapapi\\model\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|solutionrelative:busmapapi\\model\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|d:\\code\\asp\\be_app\\mapbus\\busmapapi\\model\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B68F92F3-0861-E768-FF9B-2792D20EC46C}|BusMapApi\\BusMapApi.csproj|solutionrelative:busmapapi\\model\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\Code\\ASP\\BE_App\\MapBus\\BusMapApi\\Model\\Entities\\Account.cs",
+              "RelativeDocumentMoniker": "BusMapApi\\Model\\Entities\\Account.cs",
+              "ToolTip": "D:\\Code\\ASP\\BE_App\\MapBus\\BusMapApi\\Model\\Entities\\Account.cs",
+              "RelativeToolTip": "BusMapApi\\Model\\Entities\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T05:14:55.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "D:\\Code\\ASP\\BE_App\\MapBus\\BusMapApi\\Model\\DTO\\LoginDto.cs",
+              "RelativeDocumentMoniker": "BusMapApi\\Model\\DTO\\LoginDto.cs",
+              "ToolTip": "D:\\Code\\ASP\\BE_App\\MapBus\\BusMapApi\\Model\\DTO\\LoginDto.cs",
+              "RelativeToolTip": "BusMapApi\\Model\\DTO\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T05:14:26.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BusStopController.cs",
+              "DocumentMoniker": "D:\\Code\\ASP\\BE_App\\MapBus\\BusMapApi\\Controller\\BusStopController.cs",
+              "RelativeDocumentMoniker": "BusMapApi\\Controller\\BusStopController.cs",
+              "ToolTip": "D:\\Code\\ASP\\BE_App\\MapBus\\BusMapApi\\Controller\\BusStopController.cs",
+              "RelativeToolTip": "BusMapApi\\Controller\\BusStopController.cs",
+              "ViewState": "AgIAAKUBAAAAAAAAAAAQwLABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T01:56:05.632Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

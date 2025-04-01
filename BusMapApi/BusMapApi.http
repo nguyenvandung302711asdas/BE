@@ -1,0 +1,6 @@
+@BusMapApi_HostAddress = http://localhost:5204
+
+GET {{BusMapApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

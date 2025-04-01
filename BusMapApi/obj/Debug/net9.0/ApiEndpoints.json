@@ -1,0 +1,195 @@
+[
+  {
+    "ContainingType": "BusStopAPI.Controllers.BusStopController",
+    "Method": "GetAccounts",
+    "RelativePath": "api/busstops/Account",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BusMapApi.Model.Entities.Account, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusStopAPI.Controllers.BusStopController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/busstops/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BusMapApi.Model.DTO.ForgotPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusStopAPI.Controllers.BusStopController",
+    "Method": "GetDirections",
+    "RelativePath": "api/busstops/directions1",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "startLat",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "startLng",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "endLat",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "endLng",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusStopAPI.Controllers.BusStopController",
+    "Method": "FetchAndSaveBusStops",
+    "RelativePath": "api/busstops/fetch",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusStopAPI.Controllers.BusStopController",
+    "Method": "GetBusRoute",
+    "RelativePath": "api/busstops/getroute/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusStopAPI.Controllers.BusStopController",
+    "Method": "GoogleLogin",
+    "RelativePath": "api/busstops/google-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "googleLoginDto",
+        "Type": "BusMapApi.Model.DTO.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusStopAPI.Controllers.BusStopController",
+    "Method": "CheckLogin",
+    "RelativePath": "api/busstops/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "BusMapApi.Model.DTO.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusStopAPI.Controllers.BusStopController",
+    "Method": "CheckLoginAdmin",
+    "RelativePath": "api/busstops/Login Admin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "BusMapApi.Model.DTO.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusStopAPI.Controllers.BusStopController",
+    "Method": "Register",
+    "RelativePath": "api/busstops/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountDto",
+        "Type": "BusMapApi.Model.DTO.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusStopAPI.Controllers.BusStopController",
+    "Method": "SendOtp",
+    "RelativePath": "api/busstops/Send-OTP",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BusMapApi.Model.DTO.SendOtpEmailDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusStopAPI.Controllers.BusStopController",
+    "Method": "GetBusStops",
+    "RelativePath": "api/busstops/TinBusStop",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BusMapApi.Model.Entities.BusStop, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
