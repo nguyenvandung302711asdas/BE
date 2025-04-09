@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BusMapApi.Model;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace api.Data
@@ -15,8 +15,8 @@ namespace api.Data
 
         }
 
-        public DbSet<BusStop> bustop { get; set; }
-       
+      
+
 
     }
 }
