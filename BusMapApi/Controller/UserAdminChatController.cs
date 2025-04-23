@@ -114,10 +114,6 @@ namespace BusMapApi.Controllers
             try
             {
                 var result = await _chatService.MarkMessageAsReadAsync(chatId, readerRole);
-                if (!result)
-                {
-                    return NotFound($"Không tìm thấy cuộc trò chuyện với chatId: {chatId}, hoặc không có tin nhắn nào cần đánh dấu.");
-                }
                 return NoContent();
             }
             catch (Exception ex)

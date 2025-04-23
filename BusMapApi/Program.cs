@@ -1,4 +1,6 @@
 using api.Data;
+using BusMap.Interfaces;
+using BusMap.Services;
 using BusMapApi.Services;
 using BusMapApi.Services.Implementations;
 using BusMapApi.Services.Interfaces;
@@ -31,6 +33,8 @@ builder.Services.AddScoped<IUserAdminChatService, UserAdminChatService>();
 builder.Services.AddScoped<IGroupChatService, GroupChatService>();
 
 builder.Services.AddScoped<IFavoriteRouteService, FavoriteRouteService>();
+
+builder.Services.AddHttpClient<IWeatherService, WeatherService>();
 
 
 

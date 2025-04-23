@@ -21,9 +21,18 @@ namespace api.Data
         public DbSet<GroupChatMessage> GroupChatMessages { get; set; }
         public DbSet<FavoriteRoute> FavoriteRoutes { get; set; }
         public DbSet<BusStop> bustop { get; set; }
+        public DbSet<BaiVietQuangCao> Articles { get; set; }
+        public DbSet<AnhBaiViet> ArticleImages { get; set; }
+        public DbSet<NoiDungBaiViet> ArticleContents { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<NoiDungBaiViet>().ToTable("NoiDungBaiViet");
+            modelBuilder.Entity<BaiVietQuangCao>().ToTable("BaiVietQuangCao");
+            modelBuilder.Entity<AnhBaiViet>().ToTable("AnhBaiViet");
+
+
             // Cấu hình quan hệ
             modelBuilder.Entity<FavoriteRoute>()
                 .HasOne(fr => fr.User)
