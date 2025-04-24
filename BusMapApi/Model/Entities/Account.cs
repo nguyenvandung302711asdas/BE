@@ -1,4 +1,6 @@
-﻿namespace BusMapApi.Model.Entities
+﻿using BusMapApi.Model;
+
+namespace BusMapApi.Model.Entities
 {
     public class Account
     {
@@ -7,6 +9,15 @@
         public required string Email { get; set; }
         public required string NumberPhone { get; set; }
         public required string Password { get; set; }
-      
+        public virtual ICollection<TripHistory> TripHistories { get; set; } = new List<TripHistory>();
+        // Navigation properties
+        public List<UserAdminChat> UserChats { get; set; }
+
+        public List<FavoriteRoute> FavoriteRoutes { get; set; }
+        public List<Chat> Chats { get; set; }
+        public List<GroupChatMessage> GroupChatMessages { get; set; }
+
+
+
     }
 }

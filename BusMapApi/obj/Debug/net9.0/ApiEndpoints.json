@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "BusStopAPI.Controllers.BusStopController",
+    "ContainingType": "BusMapApi.Controllers.AccountsController",
     "Method": "GetAccounts",
-    "RelativePath": "api/busstops/Account",
+    "RelativePath": "api/accounts",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -20,9 +20,29 @@
     ]
   },
   {
-    "ContainingType": "BusStopAPI.Controllers.BusStopController",
+    "ContainingType": "BusMapApi.Controllers.AccountsController",
+    "Method": "GetAddmins",
+    "RelativePath": "api/accounts/admin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BusMapApi.Model.Entities.Admin, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.AccountsController",
     "Method": "ChangePassword",
-    "RelativePath": "api/busstops/ChangePassword",
+    "RelativePath": "api/accounts/ChangePassword",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -30,6 +50,236 @@
       {
         "Name": "request",
         "Type": "BusMapApi.Model.DTO.ForgotPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.AccountsController",
+    "Method": "GetLogin",
+    "RelativePath": "api/accounts/get login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BusMapApi.Model.Entities.Admin, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.AccountsController",
+    "Method": "GetAccount",
+    "RelativePath": "api/accounts/id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BusMapApi.Model.Entities.Account",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.AccountsController",
+    "Method": "CheckLogin",
+    "RelativePath": "api/accounts/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "BusMapApi.Model.DTO.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.AccountsController",
+    "Method": "CheckLoginAdmin",
+    "RelativePath": "api/accounts/Login Admin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "BusMapApi.Model.DTO.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.AccountsController",
+    "Method": "Register",
+    "RelativePath": "api/accounts/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountDto",
+        "Type": "BusMapApi.Model.DTO.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.AccountsController",
+    "Method": "SendOtp",
+    "RelativePath": "api/accounts/Send-OTP",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BusMapApi.Model.DTO.SendOtpEmailDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.AccountsController",
+    "Method": "GetBusStops",
+    "RelativePath": "api/accounts/TinBusStop",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BusMapApi.Model.Entities.BusStop, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.AccountsController",
+    "Method": "UpdateAccount",
+    "RelativePath": "api/accounts/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "dto",
+        "Type": "BusMapApi.Model.DTO.UpdateAccountDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.ArticleController",
+    "Method": "GetBaiViet",
+    "RelativePath": "api/articles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.ArticleController",
+    "Method": "CreateArticle",
+    "RelativePath": "api/articles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "article",
+        "Type": "BusMapApi.Model.Entities.BaiVietQuangCao",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.ArticleController",
+    "Method": "GetArticleById",
+    "RelativePath": "api/articles/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.ArticleController",
+    "Method": "EditArticle",
+    "RelativePath": "api/articles/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedArticle",
+        "Type": "BusMapApi.Model.Entities.BaiVietQuangCao",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.ArticleController",
+    "Method": "DeleteArticle",
+    "RelativePath": "api/articles/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -78,102 +328,6 @@
   },
   {
     "ContainingType": "BusStopAPI.Controllers.BusStopController",
-    "Method": "GetBusRoute",
-    "RelativePath": "api/busstops/getroute/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BusStopAPI.Controllers.BusStopController",
-    "Method": "GoogleLogin",
-    "RelativePath": "api/busstops/google-login",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "googleLoginDto",
-        "Type": "BusMapApi.Model.DTO.LoginDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BusStopAPI.Controllers.BusStopController",
-    "Method": "CheckLogin",
-    "RelativePath": "api/busstops/Login",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "loginDto",
-        "Type": "BusMapApi.Model.DTO.LoginDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BusStopAPI.Controllers.BusStopController",
-    "Method": "CheckLoginAdmin",
-    "RelativePath": "api/busstops/Login Admin",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "loginDto",
-        "Type": "BusMapApi.Model.DTO.LoginDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BusStopAPI.Controllers.BusStopController",
-    "Method": "Register",
-    "RelativePath": "api/busstops/Register",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "accountDto",
-        "Type": "BusMapApi.Model.DTO.RegisterDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BusStopAPI.Controllers.BusStopController",
-    "Method": "SendOtp",
-    "RelativePath": "api/busstops/Send-OTP",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "BusMapApi.Model.DTO.SendOtpEmailDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BusStopAPI.Controllers.BusStopController",
     "Method": "GetBusStops",
     "RelativePath": "api/busstops/TinBusStop",
     "HttpMethod": "GET",
@@ -191,5 +345,614 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.ChatController",
+    "Method": "CreateChat",
+    "RelativePath": "api/chats",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatDto",
+        "Type": "BusMapApi.Models.DTOs.ChatDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BusMapApi.Model.Entities.Chat",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.ChatController",
+    "Method": "DeleteChat",
+    "RelativePath": "api/chats/{chatId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.ChatController",
+    "Method": "UpdateChatTitle",
+    "RelativePath": "api/chats/{chatId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BusMapApi.Controllers.ChatController\u002BUpdateChatTitleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BusMapApi.Model.Entities.Chat",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.ChatController",
+    "Method": "GetDetailChatById",
+    "RelativePath": "api/chats/{chatId}/details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BusMapApi.Model.Entities.DetailChat, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.ChatController",
+    "Method": "PostRequestChat",
+    "RelativePath": "api/chats/request",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BusMapApi.Models.DTOs.DetailChatDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BusMapApi.Model.Entities.DetailChat",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.ChatController",
+    "Method": "GetChatsByUserId",
+    "RelativePath": "api/chats/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BusMapApi.Model.Entities.Chat, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.FavoriteRouteController",
+    "Method": "GetFavoriteRoutes",
+    "RelativePath": "api/FavoriteRoute",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BusMapApi.Model.Entities.FavoriteRoute, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.FavoriteRouteController",
+    "Method": "AddFavoriteRoute",
+    "RelativePath": "api/FavoriteRoute",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "favoriteRouteDto",
+        "Type": "BusMapApi.Model.DTOs.FavoriteRouteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BusMapApi.Model.Entities.FavoriteRoute",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.FavoriteRouteController",
+    "Method": "DeleteFavoriteRoute",
+    "RelativePath": "api/FavoriteRoute/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.GroupChatController",
+    "Method": "SendGroupMessage",
+    "RelativePath": "api/GroupChat/message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "messageDto",
+        "Type": "BusMapApi.Model.DTOs.GroupChatMessageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BusMapApi.Model.Entities.GroupChatMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.GroupChatController",
+    "Method": "GetGroupMessages",
+    "RelativePath": "api/GroupChat/messages/{groupChatId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "groupChatId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BusMapApi.Model.Entities.GroupChatMessage, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.GroupChatController",
+    "Method": "GetPublicGroupChat",
+    "RelativePath": "api/GroupChat/public",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "BusMapApi.Model.Entities.GroupChat",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MapboxController",
+    "Method": "GetAddressSuggestions",
+    "RelativePath": "api/Mapbox/autocomplete",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MapboxController",
+    "Method": "GetRoute",
+    "RelativePath": "api/Mapbox/route",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "start",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "end",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MapboxController",
+    "Method": "GetTileLayer",
+    "RelativePath": "api/Mapbox/tile-layer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.TripHistoryController",
+    "Method": "GetTripHistories",
+    "RelativePath": "api/TripHistory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BusMapApi.Model.Entities.TripHistory, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.UserAdminChatController",
+    "Method": "CreateChat",
+    "RelativePath": "api/user-admin-chats",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chat",
+        "Type": "BusMapApi.Model.Entities.UserAdminChat",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BusMapApi.Model.Entities.UserAdminChat",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.UserAdminChatController",
+    "Method": "GetAllChats",
+    "RelativePath": "api/user-admin-chats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BusMapApi.Model.Entities.UserAdminChat, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.UserAdminChatController",
+    "Method": "DeleteChat",
+    "RelativePath": "api/user-admin-chats/{chatId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "requesterRole",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.UserAdminChatController",
+    "Method": "GetMessagesByChatId",
+    "RelativePath": "api/user-admin-chats/{chatId}/messages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BusMapApi.Model.Entities.UserAdminMessage, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.UserAdminChatController",
+    "Method": "GetChatsByAdminId",
+    "RelativePath": "api/user-admin-chats/admin/{adminId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "adminId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BusMapApi.Model.Entities.UserAdminChat, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.UserAdminChatController",
+    "Method": "MarkMessageAsRead",
+    "RelativePath": "api/user-admin-chats/chat/{chatId}/mark-read",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "readerRole",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.UserAdminChatController",
+    "Method": "SendMessage",
+    "RelativePath": "api/user-admin-chats/message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "BusMapApi.Model.Entities.UserAdminMessage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BusMapApi.Model.Entities.UserAdminMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controllers.UserAdminChatController",
+    "Method": "GetChatsByUserId",
+    "RelativePath": "api/user-admin-chats/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BusMapApi.Model.Entities.UserAdminChat, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMap.Controllers.WeatherController",
+    "Method": "GetWeatherForecast",
+    "RelativePath": "api/Weather/forecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "BusMap.Models.WeatherForecastResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Program\u002B\u003C\u003Ec__DisplayClass0_0",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__4",
+    "RelativePath": "weatherforecast",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "WeatherForecast[]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
   }
 ]

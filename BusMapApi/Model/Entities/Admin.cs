@@ -1,4 +1,6 @@
-﻿namespace BusMapApi.Model.Entities
+﻿using BusMapApi.Model;
+
+namespace BusMapApi.Model.Entities
 {
     public class Admin
     {
@@ -7,5 +9,7 @@
         public required string Email { get; set; }
         public required string NumberPhone { get; set; }
         public required string Password { get; set; }
+        public List<UserAdminChat> AdminChats { get; set; }
+
     }
 }

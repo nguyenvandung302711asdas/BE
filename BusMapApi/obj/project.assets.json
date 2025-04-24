@@ -5612,11 +5612,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\ASP\\BE_App\\MapBus\\BusMapApi\\BusMapApi.csproj",
+      "projectUniqueName": "E:\\Code\\ASP\\BE_App\\MapBus\\BusMapApi\\BusMapApi.csproj",
       "projectName": "BusMapApi",
-      "projectPath": "D:\\Code\\ASP\\BE_App\\MapBus\\BusMapApi\\BusMapApi.csproj",
+      "projectPath": "E:\\Code\\ASP\\BE_App\\MapBus\\BusMapApi\\BusMapApi.csproj",
       "packagesPath": "C:\\Users\\Trung Tin\\.nuget\\packages\\",
-      "outputPath": "D:\\Code\\ASP\\BE_App\\MapBus\\BusMapApi\\obj\\",
+      "outputPath": "E:\\Code\\ASP\\BE_App\\MapBus\\BusMapApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
