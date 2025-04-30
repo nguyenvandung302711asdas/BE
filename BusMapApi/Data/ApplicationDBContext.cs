@@ -24,7 +24,7 @@ namespace api.Data
 
         public DbSet<BusRoute> BusRoute { get; set; }
         public DbSet<DetailBusRoute> DetailBusRoute { get; set; }
-        public DbSet<Account> Account { get; set; }
+        public DbSet<Account> Accounts { get; set; }
         public DbSet<ForgotPassword> ForgotPassword { get; set; }
         public DbSet<Admin> Admin { get; set; }
 
@@ -32,16 +32,18 @@ namespace api.Data
         public DbSet<BaiVietQuangCao> Articles { get; set; }
         public DbSet<AnhBaiViet> ArticleImages { get; set; }
 
-        public DbSet<TripHistory> TripHistory { get; set; }
         public DbSet<NoiDungBaiViet> ArticleContents { get; set; }
         public DbSet<UserAdminChat> UserAdminChat { get; set; }
         public DbSet<UserAdminMessage> UserAdminMessage { get; set; }
-
+      
         public DbSet<Chat> Chats { get; set; }
-
         public DbSet<DetailChat> DetailChats { get; set; }
         public DbSet<GroupChat> GroupChats { get; set; }
         public DbSet<GroupChatMessage> GroupChatMessages { get; set; }
+
+        public DbSet<TravelInfo> TravelInfos { get; set; }
+        public DbSet<TripHistory> TripHistories { get; set; }
+        public DbSet<User> Users { get; set; }
         //public DbSet<GroupChatMessage> GroupChatMessages { get; set; }
 
         public DbSet<FavoriteRoute> FavoriteRoutes { get; set; }
@@ -55,12 +57,7 @@ namespace api.Data
             modelBuilder.Entity<UserAdminChat>().ToTable("UserAdminChat");
             modelBuilder.Entity<UserAdminMessage>().ToTable("UserAdminMessage");
             modelBuilder.Entity<NoiDungBaiViet>().ToTable("NoiDungBaiViet");
-            modelBuilder.Entity<TripHistory>()
-                .HasOne(th => th.account)
-                .WithMany(ca => ca.TripHistories)
-                .HasForeignKey(th => th.CustomerId)
-                .OnDelete(DeleteBehavior.Cascade);
-            base.OnModelCreating(modelBuilder);
+      
 
 
 
@@ -143,7 +140,7 @@ namespace api.Data
                     Password = "123456789"
                 }
             );
-
+          
             modelBuilder.Entity<GroupChat>().HasData(
                 new GroupChat
                 {

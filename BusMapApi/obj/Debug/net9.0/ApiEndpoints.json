@@ -705,7 +705,23 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BusMapApi.Controllers.TripHistoryController",
+    "ContainingType": "BusMapApi.Controller.TripHistoryController",
+    "Method": "PostTripHistory",
+    "RelativePath": "api/TripHistory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tripHistory",
+        "Type": "BusMapApi.Model.TripHistory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BusMapApi.Controller.TripHistoryController",
     "Method": "GetTripHistories",
     "RelativePath": "api/TripHistory",
     "HttpMethod": "GET",
@@ -714,7 +730,33 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[BusMapApi.Model.Entities.TripHistory, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BusMapApi.Controller.TripHistoryController",
+    "Method": "GetTripHistoriesByCustomer",
+    "RelativePath": "api/TripHistory/customer/{customerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BusMapApi.Model.TripHistory, BusMapApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

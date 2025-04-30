@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BusMapApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38507d34432980962069b6ca07c202dc540e6b33")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+915e73f65a09ecee0f7fa9b7d5062587ac13fc79")]
 [assembly: System.Reflection.AssemblyProductAttribute("BusMapApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BusMapApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

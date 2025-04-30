@@ -49,13 +49,13 @@ namespace BusMapApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Account>>> GetAccounts()
         {
-            return await _context.Account.ToListAsync();
+            return await _context.Accounts.ToListAsync();
         }
        
         [HttpGet("id")]
         public async Task<ActionResult<Account>> GetAccount(int id)
         {
-            var account = await _context.Account.FindAsync(id);
+            var account = await _context.Accounts.FindAsync(id);
 
             if (account == null)
             {
@@ -68,7 +68,7 @@ namespace BusMapApi.Controllers
         [HttpPut("update")]
         public async Task<IActionResult> UpdateAccount(int id, [FromBody] UpdateAccountDto dto)
         {
-            var existingAccount = await _context.Account.FindAsync(id);
+            var existingAccount = await _context.Accounts.FindAsync(id);
             if (existingAccount == null)
                 return NotFound();
 
@@ -84,7 +84,7 @@ namespace BusMapApi.Controllers
             }
             catch (DbUpdateException)
             {
-                if (_context.Account.Any(a => a.Email == dto.Email && a.Id != id))
+                if (_context.Accounts.Any(a => a.Email == dto.Email && a.Id != id))
                     return Conflict("Email đã tồn tại.");
 
                 return StatusCode(500, "Lỗi khi cập nhật.");
@@ -108,7 +108,7 @@ namespace BusMapApi.Controllers
                     return BadRequest(ModelState);
                 }
 
-                var account = await _context.Account.FirstOrDefaultAsync(a => a.Email == loginDto.Email);
+                var account = await _context.Accounts.FirstOrDefaultAsync(a => a.Email == loginDto.Email);
 
                 if (account == null)
                 {
@@ -165,7 +165,7 @@ namespace BusMapApi.Controllers
             try
             {
 
-                bool isEmailExists = await _context.Account.AnyAsync(a => a.Email == accountDto.Email);
+                bool isEmailExists = await _context.Accounts.AnyAsync(a => a.Email == accountDto.Email);
                 bool isEmailAdminExists = await _context.Admin.AnyAsync(a => a.Email == accountDto.Email);
 
 
@@ -183,7 +183,7 @@ namespace BusMapApi.Controllers
                     Password = accountDto.Password
                 };
 
-                _context.Account.Add(account);
+                _context.Accounts.Add(account);
                 await _context.SaveChangesAsync();
 
                 return Ok(new { message = "Đăng ký thành công!", account });
@@ -199,7 +199,7 @@ namespace BusMapApi.Controllers
         {
             try
             {
-                var getEmail = await _context.Account
+                var getEmail = await _context.Accounts
                     .FirstOrDefaultAsync(a => a.Email.ToLower() == request.Email.ToLower());
 
                 //var getEmail = await _context.Account.FirstOrDefaultAsync(a => a.Email == request.Email);
@@ -270,7 +270,7 @@ namespace BusMapApi.Controllers
                     return BadRequest(new { message = "Mã OTP không hợp lệ hoặc đã hết hạn!" });
                 }
 
-                var account = await _context.Account.FirstOrDefaultAsync(a => a.Email == request.Email);
+                var account = await _context.Accounts.FirstOrDefaultAsync(a => a.Email == request.Email);
                 if (account == null)
                 {
                     return BadRequest(new { message = "Không tìm thấy tài khoản với email này!" });
@@ -283,7 +283,7 @@ namespace BusMapApi.Controllers
 
                 account.Password =(request.NewPassword);
 
-                _context.Account.Update(account);
+                _context.Accounts.Update(account);
                 _context.ForgotPassword.Remove(otpRecord); // Xóa OTP sau khi đổi mật khẩu
                 await _context.SaveChangesAsync();
 

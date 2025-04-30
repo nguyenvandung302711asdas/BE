@@ -33,7 +33,7 @@ namespace BusMapApi.Controllers
                 if (chat.UserId <= 0 || chat.AdminId <= 0)
                     return BadRequest("UserId và AdminId phải lớn hơn 0.");
 
-                var userAccount = await _context.Account.FirstOrDefaultAsync(a => a.Id == chat.UserId);
+                var userAccount = await _context.Accounts.FirstOrDefaultAsync(a => a.Id == chat.UserId);
                 var adminAccount = await _context.Admin.FirstOrDefaultAsync(a => a.Id == chat.AdminId);
 
                 if (userAccount == null || adminAccount == null)
@@ -71,7 +71,7 @@ namespace BusMapApi.Controllers
                 if (userId <= 0)
                     return BadRequest("UserId phải lớn hơn 0.");
 
-                var userAccount = await _context.Account.FirstOrDefaultAsync(a => a.Id == userId);
+                var userAccount = await _context.Accounts.FirstOrDefaultAsync(a => a.Id == userId);
                 if (userAccount == null)
                     return NotFound($"Không tìm thấy tài khoản với UserId: {userId}.");
                 //if (userAccount.Email.EndsWith("@admin.utc2"))
@@ -145,7 +145,7 @@ namespace BusMapApi.Controllers
                 object? senderAccount;
                 if (message.SenderRole == "User")
                 {
-                    senderAccount = await _context.Account.FirstOrDefaultAsync(a => a.Id == chat.UserId);
+                    senderAccount = await _context.Accounts.FirstOrDefaultAsync(a => a.Id == chat.UserId);
                 }
                 else if (message.SenderRole == "Admin")
                 {

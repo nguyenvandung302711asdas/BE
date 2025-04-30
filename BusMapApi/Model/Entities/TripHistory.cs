@@ -1,51 +1,72 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
-namespace BusMapApi.Model.Entities
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.Text.Json.Serialization;
+using BusMapApi.Model.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
+namespace BusMapApi.Model
 {
+    [Table("TripHistory")] // Chính xác tên bảng trong SQL Server
     public class TripHistory
     {
-        [Key]
-        public int Id { get; set; }
+        /* public int Id { get; set; }
 
-        [Required]
-        public int CustomerId { get; set; } // Không cần ForeignKey ở đây vì đã khai báo bên dưới
+         [Required]
+         public int CustomerId { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string BusNumber { get; set; }
+         [Required]
+         public string StartLocation { get; set; }
 
-        [Required]
-        [StringLength(255)]
-        public string StartLocation { get; set; }
+         [Required]
+         public string EndLocation { get; set; }
 
-        [Required]
-        [StringLength(255)]
-        public string EndLocation { get; set; }
+         [Required]
+         public DateTime StartTime { get; set; }
 
-        [Required]
-        public DateTime StartTime { get; set; }
+         public DateTime? EndTime { get; set; } // Nullable, not required
 
-        public DateTime? EndTime { get; set; }
+         [Required]
+         public string RouteNumber { get; set; }
 
-        [NotMapped]
-        public int? Duration => EndTime.HasValue ? (int)(EndTime.Value - StartTime).TotalMinutes : null;
+         public int? Cost { get; set; } // Nullable
+         public int? DurationMinutes { get; set; } // Nullable
+         public int? WalkingDistance { get; set; } // Nullable
+         public double? BusDistance { get; set; } // Nullable
 
-        [Required]
-        [Column(TypeName = "decimal(10,2)")]
-        [Range(0, double.MaxValue, ErrorMessage = "Fare must be non-negative")]
-        public decimal Fare { get; set; }
+         // Navigational property, không ánh xạ vào cơ sở dữ liệu
+         [JsonIgnore]              // ✅ Nếu bạn dùng System.Text.Json (mặc định .NET 5+)
+         [ValidateNever]           // ✅ Ngăn validation trong ASP.NET
+         [NotMapped]               // ✅ Ngăn EF Core tự map nếu không cần thiết
+         public Account Customer { get; set; } // Navigational property*/
+      
+            public int Id { get; set; }
 
-        [Required]
-        [StringLength(20)]
-        public string PaymentStatus { get; set; } = "Unpaid";
+            [Required]
+            public int CustomerId { get; set; }
 
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
+            [Required]
+            public string StartLocation { get; set; }
 
-        // Khóa ngoại đến bảng CustomerAccount
-        [ForeignKey(nameof(CustomerId))] // Sửa lại tên đúng
-        public virtual Account account { get; set; }
-    }
+            [Required]
+            public string EndLocation { get; set; }
 
+            [Required]
+            public DateTime StartTime { get; set; }
+
+            public DateTime? EndTime { get; set; }
+
+            [Required]
+            public string RouteNumber { get; set; }
+
+            public int? Cost { get; set; }
+            public int? DurationMinutes { get; set; }
+            public int? WalkingDistance { get; set; }
+            public double? BusDistance { get; set; }
+
+            [ForeignKey("CustomerId")]
+            public Account Customer { get; set; } // Navigation property
+        }
+
+    
 }
