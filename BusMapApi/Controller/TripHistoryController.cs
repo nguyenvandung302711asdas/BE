@@ -60,17 +60,41 @@ namespace BusMapApi.Controller
         //    return Ok(tripHistories);
 
         //}
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<object>>> GetTripHistories()
+        //{
+        //    var tripHistories = await _context.TripHistories
+        //        .Include(t => t.Customer)
+        //        .Select(t => new
+        //        {
+        //            t.Id,
+        //            t.CustomerId,
+        //            FullName = t.Customer.FullName, // Lấy fullname từ Account
+        //            //Email = t.Customer.Email,
+        //            t.StartLocation,
+        //            t.EndLocation,
+        //            t.StartTime,
+        //            t.EndTime,
+        //            t.RouteNumber,
+        //            t.Cost,
+        //            t.DurationMinutes,
+        //            t.WalkingDistance,
+        //            t.BusDistance
+        //        })
+        //        .ToListAsync();
+
+        //    return Ok(tripHistories);
+        //}
         [HttpGet]
         public async Task<ActionResult<IEnumerable<object>>> GetTripHistories()
         {
             var tripHistories = await _context.TripHistories
-                .Include(t => t.Customer)
+                .Include(t => t.Customer) // đảm bảo EF lấy dữ liệu từ bảng Account
                 .Select(t => new
                 {
                     t.Id,
                     t.CustomerId,
-                    FullName = t.Customer.FullName, // Lấy fullname từ Account
-                    //Email = t.Customer.Email,
+                    FullName = t.Customer != null ? t.Customer.FullName : "", // check null
                     t.StartLocation,
                     t.EndLocation,
                     t.StartTime,

@@ -10,7 +10,7 @@ namespace BusMapApi.Model
     [Table("TripHistory")] // Chính xác tên bảng trong SQL Server
     public class TripHistory
     {
-        /* public int Id { get; set; }
+         public int Id { get; set; }
 
          [Required]
          public int CustomerId { get; set; }
@@ -37,36 +37,37 @@ namespace BusMapApi.Model
          // Navigational property, không ánh xạ vào cơ sở dữ liệu
          [JsonIgnore]              // ✅ Nếu bạn dùng System.Text.Json (mặc định .NET 5+)
          [ValidateNever]           // ✅ Ngăn validation trong ASP.NET
-         [NotMapped]               // ✅ Ngăn EF Core tự map nếu không cần thiết
-         public Account Customer { get; set; } // Navigational property*/
-      
-            public int Id { get; set; }
+         //[NotMapped]               // ✅ Ngăn EF Core tự map nếu không cần thiết
+                                   //[ForeignKey("CustomerId")]
+        public Account Customer { get; set; } // Navigational property*/
 
-            [Required]
-            public int CustomerId { get; set; }
+        //public int Id { get; set; }
 
-            [Required]
-            public string StartLocation { get; set; }
+        //[Required]
+        //public int CustomerId { get; set; }
 
-            [Required]
-            public string EndLocation { get; set; }
+        //[Required]
+        //public string StartLocation { get; set; }
 
-            [Required]
-            public DateTime StartTime { get; set; }
+        //[Required]
+        //public string EndLocation { get; set; }
 
-            public DateTime? EndTime { get; set; }
+        //[Required]
+        //public DateTime StartTime { get; set; }
 
-            [Required]
-            public string RouteNumber { get; set; }
+        //public DateTime? EndTime { get; set; }
 
-            public int? Cost { get; set; }
-            public int? DurationMinutes { get; set; }
-            public int? WalkingDistance { get; set; }
-            public double? BusDistance { get; set; }
+        //[Required]
+        //public string RouteNumber { get; set; }
 
-            [ForeignKey("CustomerId")]
-            public Account Customer { get; set; } // Navigation property
-        }
+        //public int? Cost { get; set; }
+        //public int? DurationMinutes { get; set; }
+        //public int? WalkingDistance { get; set; }
+        //public double? BusDistance { get; set; }
 
-    
+        //[ForeignKey("CustomerId")]
+        //public Account Customer { get; set; } // Navigation property
+    }
+
+
 }

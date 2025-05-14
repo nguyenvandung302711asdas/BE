@@ -161,7 +161,7 @@ public class ChatService : IChatService
         {
             Headers =
         {
-            { "Authorization", "Bearer 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" },
+            { "Authorization", "Bearer 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" },
             { "Accept", "application/json" }
         },
             Content = new StringContent(jsonContent, Encoding.UTF8, "application/json")

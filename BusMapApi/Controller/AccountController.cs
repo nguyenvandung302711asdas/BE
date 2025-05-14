@@ -195,62 +195,62 @@ namespace BusMapApi.Controllers
         }
         [HttpPost("Send-OTP")]
 
-        public async Task<IActionResult> SendOtp([FromBody] SendOtpEmailDto request)
-        {
-            try
+            public async Task<IActionResult> SendOtp([FromBody] SendOtpEmailDto request)
             {
-                var getEmail = await _context.Accounts
-                    .FirstOrDefaultAsync(a => a.Email.ToLower() == request.Email.ToLower());
-
-                //var getEmail = await _context.Account.FirstOrDefaultAsync(a => a.Email == request.Email);
-                if (getEmail == null)
-                {
-                    return BadRequest(new { message = "Email không tồn tại trong hệ thống!" });
-                }
-
-                var random = new Random();
-                var otpCode = random.Next(100000, 999999).ToString();
-
                 try
                 {
-                    var smtpClient = new SmtpClient("smtp.gmail.com")
+                    var getEmail = await _context.Accounts
+                        .FirstOrDefaultAsync(a => a.Email.ToLower() == request.Email.ToLower());
+
+                    //var getEmail = await _context.Account.FirstOrDefaultAsync(a => a.Email == request.Email);
+                    if (getEmail == null)
                     {
-                        Port = 587, // Cổng SMTP của Gmail
-                        Credentials = new NetworkCredential("Trungtin0972@gmail.com", "graa ltfg psdp wywx"),
-                        EnableSsl = true, // Bật SSL để bảo mật
+                        return BadRequest(new { message = "Email không tồn tại trong hệ thống!" });
+                    }
+
+                    var random = new Random();
+                    var otpCode = random.Next(100000, 999999).ToString();
+
+                    try
+                    {
+                        var smtpClient = new SmtpClient("smtp.gmail.com")
+                        {
+                            Port = 587, // Cổng SMTP của Gmail
+                            Credentials = new NetworkCredential("Trungtin0972@gmail.com", "graa ltfg psdp wywx"),
+                            EnableSsl = true, // Bật SSL để bảo mật
+                        };
+
+                        var mailMessage = new MailMessage
+                        {
+                            From = new MailAddress("Trungtin0972@gmail.com"), // Địa chỉ email gửi
+                            Subject = "OTP đổi mật khẩu.",
+                            Body = "Mã OTP của bạn là: " + otpCode,
+                            IsBodyHtml = true,
+                        };
+                        mailMessage.To.Add(getEmail.Email);
+                        smtpClient.Send(mailMessage);
+                    }
+                    catch (Exception ex)
+                    {
+                        return StatusCode(500, new { message = "Lỗi khi gửi email OTP!", error = ex.Message });
+                    }
+
+                    var newOtp = new ForgotPassword
+                    {
+                        Email = getEmail.Email,
+                        OTP = otpCode,
                     };
 
-                    var mailMessage = new MailMessage
-                    {
-                        From = new MailAddress("Trungtin0972@gmail.com"), // Địa chỉ email gửi
-                        Subject = "OTP đổi mật khẩu.",
-                        Body = "Mã OTP của bạn là: " + otpCode,
-                        IsBodyHtml = true,
-                    };
-                    mailMessage.To.Add(getEmail.Email);
-                    smtpClient.Send(mailMessage);
+                    _context.ForgotPassword.Add(newOtp);
+                    await _context.SaveChangesAsync();
+
+                    return Ok(new { message = "Mã OTP đã được gửi đến email của bạn." });
                 }
                 catch (Exception ex)
                 {
-                    return StatusCode(500, new { message = "Lỗi khi gửi email OTP!", error = ex.Message });
+                    return StatusCode(500, new { message = "Lỗi hệ thống!", error = ex.Message });
                 }
-
-                var newOtp = new ForgotPassword
-                {
-                    Email = getEmail.Email,
-                    OTP = otpCode,
-                };
-
-                _context.ForgotPassword.Add(newOtp);
-                await _context.SaveChangesAsync();
-
-                return Ok(new { message = "Mã OTP đã được gửi đến email của bạn." });
             }
-            catch (Exception ex)
-            {
-                return StatusCode(500, new { message = "Lỗi hệ thống!", error = ex.Message });
-            }
-        }
 
 
 
